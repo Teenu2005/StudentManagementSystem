@@ -1,0 +1,1188 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    
+}
+body{
+    /* background: url('./assets/images/Bacground.jpg') no-repeat;
+    background-attachment: fixed;
+    background-size: cover;
+    background-position: center; */
+    background:linear-gradient(0deg,#eb8d8e,#f2cbb4);
+    backdrop-filter: blur(3.7px);    
+}
+/* home */
+.layout{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.content-text{
+  border-radius: 1em;
+  background: #fff;
+  width: 60%;
+  padding:1em;
+  color: #4d353a;
+  font-family: 'Gill Sans';
+}
+.content-text *{
+  display: block;
+  font-family: 'Courier New', Courier, monospace;
+}
+b{
+  text-align: center;
+  font-size: 1.5em;
+}
+.imgmakeease{
+  width: 50%;
+  margin-inline: 5%;
+  transition: all .3s ease-in;
+}
+.imgmakeease:hover{
+  scale: 1.2;
+}
+#root{
+    min-width: 100%;
+    min-height: 100vh;
+    display: grid;
+    grid-template-columns: 1fr ;
+    grid-template-rows:auto 1fr auto;
+    grid-template-areas: 
+    "nav  nav"
+    " main sidbar"
+    "footer footer";
+}
+aside{ 
+    position: sticky;
+    right: 0;
+    top: 8.9vh;
+    height: 100%;
+    width: 50vw;
+    background: rgba(7, 6, 6, 0.05);
+    display: none;
+}
+.toggle{
+    display: block;
+}
+main{
+    grid-area: main;
+    max-width:100%;
+    padding: .5em;
+}
+nav{
+    grid-area: nav;
+    position:sticky;
+    top:1;
+    max-width: 100%;
+    z-index: 1;
+}
+footer{
+    grid-area: footer;
+}
+
+nav{
+    background: rgba(7, 6, 6, 0.05);
+    /* padding: 1em; */
+    display: flex;
+    justify-content: space-between;
+}
+.link{
+    all: unset;
+}
+.nav-list{
+    display: flex;
+}
+li{
+    all: unset;
+    padding: .5em;
+    margin: .4em;
+    color: #fff;
+    font-family: 'Segoe UI';
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    width: fit-content;
+}
+li:hover{
+    background: white;
+    color: black;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.menubut{
+    all: unset;
+    cursor: pointer;
+}
+.sidbar-list{
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+}
+footer{
+  background:#4d353a;
+  color: white;
+    padding: .3em;
+}
+.sidebar-list{
+    margin-inline:20%;
+}
+.logopng{
+    margin: .6em;
+}
+box-icon{
+    margin-inline-end:1em;
+    cursor: pointer;
+}
+.logo{
+    margin: 0;
+}
+/* nav close */
+
+
+/* Login form */
+form{
+  background-color: #ffffff;
+  padding: 2em;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width:800px;
+  margin: 0 auto;
+  font-family: Arial, sans-serif;
+  box-sizing: border-box; 
+}
+
+
+label {
+    display: block;
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-bottom: 0.5em;
+    color: #333;
+  }
+input{
+    transition: all 1s linear;
+    position: relative;
+    padding: .6em;
+    margin-inline: 5%;
+    outline: none;
+    border: none;
+    font-weight:bold;
+    border-bottom: 3px solid black;
+    margin: 4% 5%;
+}
+input, select {
+    width: 90%;
+    padding: .6em;
+    margin-inline: 5%;
+    border-radius: 8px;
+    border: 1px solid #ccc;
+    font-size: 1rem;
+    transition: border 0.3s ease;
+  }
+  
+  input:focus, select:focus {
+    border: 1px solid #00bcd4;
+    outline: none;
+  }
+  .error {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 0.3em;
+    display: block;
+  }
+input::placeholder{
+    /* font-weight:bold; */
+    font-size: 1.2em;
+    color: black;
+}
+.links{
+    font-family:sans-serif;
+    cursor: pointer;
+    padding: 1em;
+    transition: all .6s linear;
+}
+.empty{
+    height: 10vh;
+}
+.links:hover{
+    color: rgb(7, 32, 58);
+    font-weight: bold;
+    cursor: pointer;
+}
+.lock{
+    position: absolute;
+    bottom:1.5em;
+    right: 5%;
+    cursor: pointer;
+}
+button{
+    display: block;
+    width: 90%;
+    padding: 1em;
+    margin: .4em;
+    background: dodgerblue;
+    border: none;
+    cursor: pointer;
+    border-radius: .5em;
+    transition: all .4s ease-in;
+}
+button[type="submit"]{
+    margin-inline: auto;
+}
+button:hover{
+    background-color: rgb(14, 67, 121);
+}
+h2{
+    text-align: center;
+  /* color: #00bcd4; */
+  margin-block:1em;
+}
+div{
+    overflow-x: visible;
+    position: relative;
+    /* margin-bottom: 1.5em; */
+}
+
+
+/* view */
+.contanier {
+    margin-top: 1em;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 1em;
+    padding: 1em;
+}
+
+.option {
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 1.5em;
+    border-radius: 1em;
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.3);
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    text-align: center;
+    color: black;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.option:hover {
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.9);
+}
+
+
+
+hr {
+    border: none;
+    height: 2px;
+    background:black;
+    margin: 0.5em auto;
+    width: 50%;
+}
+
+.dummy {
+    display: block;
+    font-size: 1em;
+    margin-bottom:10%;
+    opacity: 0.8;
+}
+
+.button {
+    background: dodgerblue;
+    color: white;
+    border: none;
+    padding: 0.75em 1.5em;
+    border-radius: 0.5em;
+    cursor: pointer;
+    font-size: 1em;
+    transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.button:hover {
+    background:rgb(12, 57, 102);
+    /* transform: scale(1.05); */
+}
+
+.button:active {
+    transform: scale(0.95);
+}
+#back-but{
+    width: 15vw;
+    z-index: 5;
+}
+/* inner view */
+.card-view-student {
+    padding: 2em;
+    background: rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    max-width: 100%;
+    margin: 0 auto;
+}
+/* Styling for button list (align buttons horizontally) */
+.button-list {
+    width: 100%;
+    display: flex;
+    justify-content: space-evenly;
+    margin-bottom: 1.5em;
+}
+
+.button-list button {
+    padding: 0.75em 1.5em;
+    background-color: #00bcd4;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+    width: 30%;
+    text-align: center;
+}
+
+/* Hover effect for buttons */
+.button-list button:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+/* Focus state for buttons */
+.button-list button:focus {
+    outline: none;
+    box-shadow: 0 0 8px rgba(0, 188, 212, 0.5);
+}
+
+
+input:focus {
+    border: 1px solid #00bcd4;
+    outline: none;
+}
+
+.space-y-4 {
+    margin-bottom: 1.5em;
+}
+
+/* Table style for displaying student details */
+.card-student {
+    background: #ffffff;
+    padding: 1.5em;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #333;
+    margin-bottom: 1.5em;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-student:last-child{
+  justify-content: end;
+}
+.one{
+display: flex;
+justify-content:center;
+align-items: center;
+background: #fff;
+margin: 1em;
+padding: 1em;
+border-radius: 1em;
+}
+.one table{
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #333;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: space-between;
+    padding: .3em;
+}
+.one table td{
+    padding: 0.5em 1em;
+    font-size: 1.1rem;
+}
+.one table th{
+  text-align: left;
+  color: #00bcd4;
+  font-weight: 600;
+}
+.one button.view-but{
+display: flex;
+align-items: center;
+background-color: #00bcd4;
+color: white;
+padding: 0.75em 1.5em;
+border-radius: 8px;
+font-size: 1.1rem;
+border: none;
+cursor: pointer;
+transition: background-color 0.3s ease, transform 0.3s ease;
+margin-top: 1em;
+}
+
+.card-student td {
+    padding: 0.5em 1em;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.card-student th {
+    text-align: left;
+    color: #00bcd4;
+    font-weight: 600;
+}
+
+
+
+.one button.view-but:hover {
+    background-color: #0097a7;
+    transform: scale(1.05);
+}
+
+.card-full {
+    background: #ffffff;
+    padding: 2em;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2em;
+}
+
+.card-full table {
+    width: 100%;
+    border-spacing: 0;
+}
+
+.card-full th, .card-full td {
+    padding: 1em;
+    font-size: 1.1rem;
+}
+
+.card-full th {
+    text-align: left;
+    color: #00bcd4;
+    font-weight: 600;
+}
+
+.card-full td {
+    text-align: left;
+    color: #333;
+}
+/* course */
+.card-course{
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  padding: 1.5em;
+  border-radius: 1em;
+  backdrop-filter: blur(10px);
+  background: rgba(255, 255, 255, 0.3);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  text-align: center;
+  color: black;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+.card-course table{
+  background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #333;
+    width: 60%;
+    margin-inline: 20%;
+    text-align: left;
+    padding: .3em;
+    border-radius: 1em;
+
+}
+.card-course th{
+  text-align:left;
+  padding-inline-start: 1em;
+  color: #00bcd4;
+  font-weight: 600;
+}
+.card-course td{
+    padding: 0.5em 1em;
+    font-size: 1.1rem;
+}
+
+/* Profile image styling */
+.profile-container{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.profile-pic {
+    border-radius: 50%;
+    width: 15%;
+    height: 20%;
+    margin-bottom: 1em;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.profile-pic:hover {
+    transform: scale(1.1);
+}
+.sub-form {
+    margin-bottom: 2em;
+    padding: 1.5em;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    background-color: #54475a;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  }
+  
+.sub-form h3 {
+    color: #00bcd4;
+    font-size: 1.3rem;
+    margin-bottom: 1em;
+    font-weight: bold;
+    text-transform: uppercase;
+  }
+  
+/* attendence */
+.student-list {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    margin: 30px;
+  }
+  
+  .student-list-title {
+    color: #2c3e50;
+    text-align: center;
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  
+  .attendance-container {
+    padding: 20px;
+    background-color: #f4f6f7;
+    border-radius: 10px;
+  }
+  
+  .attendance-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 20px;
+  }
+  
+  .student-row {
+    border-bottom: 1px solid #ecf0f1;
+  }
+  
+  .student-info {
+    padding: 15px;
+    background-color: #ffffff;
+    border-radius: 5px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  }
+  
+  .attendance-options {
+    padding: 10px;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+  }
+  
+  .attendance-label {
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin-right: 20px;
+  }
+  
+  .attendance-label input {
+    margin-right: 8px;
+  }
+  
+  .attendance-label:hover {
+    color: #3498db;
+  }
+  
+  .submit-btn {
+    background-color: #3498db;
+    color: white;
+    padding: 15px 30px;
+    border: none;
+    cursor: pointer;
+    font-size: 18px;
+    border-radius: 5px;
+    margin-top: 20px;
+    transition: background-color 0.3s ease;
+  }
+  
+  .submit-btn:hover {
+    background-color: #2980b9;
+  }
+  
+  
+/* Add transition for buttons on hover for a smoother effect */
+.button-list button, .card-student button.view-but {
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+/* Profile Card */
+.profile-card {
+  background-color: #ffffff;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  width: 100%;
+  max-width: 600px;
+  margin-top: 20px;
+  margin: auto;
+  display: flex;
+}
+
+.profile-table {
+  width: 100%;
+  border-collapse: collapse;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  color: #333;
+}
+
+.profile-table th {
+  text-align: left;
+  padding: 12px;
+  font-weight: 600;
+  color: #2c3e50;
+}
+
+.profile-table td {
+  padding: 12px;
+  font-weight: 400;
+  color: #7f8c8d;
+  border-bottom: 1px solid #ecf0f1;
+}
+
+.profile-table tr:last-child td {
+  border-bottom: none;
+}
+
+/* Hover Effects for Table Rows */
+.profile-table tr:hover {
+  background-color: #ecf0f1;
+}
+
+.profile-table td:hover {
+  background-color: #f1f1f1;
+  transition: background-color 0.3s ease;
+}
+
+/* Loading / No User Found */
+p {
+  font-size: 18px;
+  color: #e74c3c;
+  text-align: center;
+  font-weight: 600;
+}
+
+/* performance */
+/* General styling for the table container */
+.table-container {
+  max-width: 90%;
+  margin: 20px auto;
+  padding: 20px;
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for the table */
+.marks-table {
+  width: 100%;
+  border-collapse: collapse;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
+}
+
+.marks-table thead {
+  background-color: #4CAF50;
+  color: white;
+}
+
+.marks-table th, .marks-table td {
+  padding: 12px 15px;
+  text-align: center;
+  border: 1px solid #ddd;
+}
+
+/* Styling for table rows and hover effects */
+.marks-table tbody tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+.marks-table tbody tr:hover {
+  background-color: #e1f7d5;
+  cursor: pointer;
+}
+
+/* Styling for error message */
+.error-message {
+  color: #f44336;
+  font-size: 16px;
+  text-align: center;
+  margin-top: 20px;
+}
+
+
+
+@media screen and (max-width:500px) {
+    *{overflow-x:scroll ;scrollbar-width: none;}
+    /* home */
+    .layout{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content-text{
+      border-radius: 1em;
+      background: #fff;
+      width: 60%;
+      padding:1em;
+      color: #4d353a;
+      font-family: 'Gill Sans';
+    }
+    .content-text *{
+      display: block;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    b{
+      text-align: center;
+      font-size: 1.5em;
+    }
+    .imgmakeease{
+      width: 50%;
+      margin-inline: 5%;
+      transition: all .3s ease-in;
+    }
+    .imgmakeease:hover{
+      scale: 1.2;
+    }
+    /* end */
+    .contanier {
+        grid-template-columns: 1fr;
+    }
+    nav{
+        padding: 1em;
+    }
+    .logopng{
+        margin: 0em;
+    }
+    /* perform */
+    .table-container {
+      padding: 10px;
+    }
+  
+    .marks-table {
+      font-size: 12px;
+    }
+  
+    .marks-table th, .marks-table td {
+      padding: 8px;
+    }
+  
+    .marks-table thead {
+      font-size: 14px;
+    }
+  
+    .marks-table td {
+      padding: 8px;
+    }
+    /* profile */
+    .profile-container {
+        padding: 10px;
+        margin: auto;
+      }
+    
+      .profile-pic {
+        width: 15%;
+        height: 20%;
+        margin-bottom: 15px;
+      }
+    
+      .profile-card {
+        padding: 15px;
+        max-width: 100%;
+        margin-top: 15px;
+      }
+    
+      .profile-table th,
+      .profile-table td {
+        font-size: 14px;
+        padding: 8px;
+      }
+    
+      .profile-table {
+        font-size: 12px;
+      }
+    
+      p {
+        font-size: 16px;
+      }
+    
+    /* attendence */
+    .student-list {
+        margin: 10px;
+      }
+    
+      .student-list-title {
+        font-size: 20px;
+      }
+    
+      .attendance-container {
+        padding: 10px;
+        background-color: #ffffff;
+      }
+    
+      .attendance-table {
+        width: 100%;
+        font-size: 14px;
+      }
+    
+      .student-row {
+        display: block;
+        margin-bottom: 10px;
+      }
+    
+      .student-info {
+        padding: 10px;
+        background-color: #f9f9f9;
+        font-size: 14px;
+        box-shadow: none;
+      }
+    
+      .attendance-options {
+        flex-direction: column;
+        padding: 8px;
+      }
+    
+      .attendance-label {
+        margin-bottom: 10px;
+        font-size: 14px;
+      }
+    
+      .submit-btn {
+        width: 100%;
+        padding: 12px;
+        font-size: 14px;
+      }
+    /* form */
+    form {
+        padding: 1.5em;
+        max-width: 60%;
+      }
+    
+      label {
+        font-size: 1rem;
+      }
+    
+      input, select {
+        padding: 0.8em;
+        font-size: 1rem;
+      }
+    .empty{
+        height: 0;
+    }
+    .menubut{
+        display: flex;
+        align-items: center;
+    }
+    /* inner view */
+    .button-list {
+        flex-direction: column;
+        gap: 1em;
+    }
+
+    .button-list button {
+        width: 100%;
+        padding: 1em 2em;
+    }
+
+    .card-student {
+        padding: 1.2em;
+    }
+
+    .card-full {
+        padding: 1.5em;
+    }
+
+    .profile-pic {
+        width: 15%;
+        height: 20%;
+    }
+
+    .card-student td {
+        font-size: 1rem;
+    }
+
+    input {
+        font-size: 1rem;
+        padding: 0.8em;
+    }
+
+    .card-student button.view-but {
+        font-size: 1rem;
+        padding: 0.6em 1.2em;
+    }
+    .card-student {
+      background: #ffffff;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      color: #333;
+      margin-bottom: 1.5em;
+      width: 100%;
+      text-align: left;
+      display: block;
+  }
+  .one table{
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #333;
+    margin-bottom: 1.5em;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.one table td{
+    padding: 0.5em 1em;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.one table th{
+  text-align: left;
+  color: #00bcd4;
+  font-weight: 600;
+}
+}
+
+@media screen and (max-width:950px) {
+    *{overflow-x:scroll ;scrollbar-width: none;}
+    .card-student {
+      background: #ffffff;
+      padding: 1.5em;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+      color: #333;
+      margin-bottom: 1.5em;
+      width: 100%;
+      text-align: left;
+      display: block;
+  }
+  .one table{
+    background: #ffffff;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.05);
+    color: #333;
+    margin-bottom: 1.5em;
+    width: 100%;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.one table td{
+    padding: 0.5em 1em;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #e0e0e0;
+}
+.one table th{
+  text-align: left;
+  color: #00bcd4;
+  font-weight: 600;
+}
+    /* home */
+    .layout{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+    .content-text{
+      border-radius: 1em;
+      background: #fff;
+      width: 60%;
+      padding:1em;
+      color: #4d353a;
+      font-family: 'Gill Sans';
+    }
+    .content-text *{
+      display: block;
+      font-family: 'Courier New', Courier, monospace;
+    }
+    b{
+      text-align: center;
+      font-size: 1.5em;
+    }
+    .imgmakeease{
+      width: 50%;
+      margin-inline: 5%;
+      transition: all .3s ease-in;
+    }
+    .imgmakeease:hover{
+      scale: 1.2;
+    }
+    /* end */
+    .empty{
+        height: 0;
+    }
+    .menubut{
+        display: flex;
+        align-items: center;
+        
+    }
+    .logopng{
+        margin: 0em;
+    }
+    nav{
+        padding: 1em;
+    }
+    /* perofrm */
+    .table-container {
+      padding: 15px;
+    }
+  
+    .marks-table {
+      font-size: 14px;
+    }
+  
+    .marks-table th, .marks-table td {
+      padding: 10px;
+    }
+  
+    .marks-table thead {
+      font-size: 16px;
+    }
+  
+    .marks-table td {
+      padding: 10px;
+    }
+    /* profile */
+    .profile-container {
+        margin: auto;
+        padding: 15px;
+      }
+    
+      .profile-pic {
+        margin-bottom: 20px;
+      }
+    
+      .profile-card {
+        padding: 18px;
+        max-width: 100%;
+        margin-top: 20px;
+      }
+    
+      .profile-table th,
+      .profile-table td {
+        font-size: 15px;
+        padding: 10px;
+      }
+    
+      .profile-table {
+        font-size: 14px;
+      }
+    
+      p {
+        font-size: 17px;
+      }
+    /* attendence */
+    .student-list {
+        margin: 20px;
+      }
+    
+      .student-list-title {
+        font-size: 22px;
+      }
+    
+      .attendance-container {
+        padding: 15px;
+      }
+    
+      .attendance-table {
+        width: 100%;
+        font-size: 15px;
+      }
+    
+      .student-info {
+        padding: 12px;
+        font-size: 15px;
+      }
+    
+      .attendance-options {
+        display: flex;
+        padding: 12px;
+      }
+    
+      .attendance-label {
+        margin-right: 15px;
+        font-size: 15px;
+      }
+    
+      .submit-btn {
+        width: 100%;
+        padding: 14px;
+        font-size: 16px;
+      }
+      /* profile */
+      /* Profile Container */
+.profile-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 20px;
+    min-height: 100vh;
+  }
+  
+  /* Profile Picture */
+  .profile-pic {
+    border-radius: 50%;
+    width: 30%;
+    height: 20%;
+    object-fit: cover;
+    margin-bottom: 20px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease-in-out;
+  }
+  
+  .profile-pic:hover {
+    transform: scale(1.1);
+  }
+  
+  
+    /* form */
+    form {
+        padding: 1.2em;
+        width: 70%;
+      }
+    
+      label {
+        font-size: 0.95rem;
+      }
+    
+      input, select {
+        padding: 0.7em;
+        font-size: 1rem;
+      }
+    
+    /* inner view */
+    .button-list {
+        flex-direction: row;
+        justify-content: space-evenly;
+    }
+
+    .button-list button {
+        width: 30%;
+    }
+
+    .card-student {
+        padding: 1.5em;
+    }
+    .card-student td {
+        font-size: 1.1rem;
+    }
+}
+ @media screen and (min-width:1000px) {
+
+} 

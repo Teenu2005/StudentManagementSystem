@@ -1,0 +1,5 @@
+sem_num,studentId,subject_name,subject_code,max_mark,ia_mark,ue_mark,total_mark
+1,12344,co,CSCO1,100,25,75,100
+1,12344,tamil,CSTA1,100,20,80,100
+1,12345,maths,CSMA1,100,30,70,100
+1,12345,english,CSEN1,100,20,80,100

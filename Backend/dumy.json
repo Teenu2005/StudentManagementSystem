@@ -1,0 +1,148 @@
+[
+  {
+    "department": {
+      "dep_id": "01CS",
+      "dep_name": "Computer Science"
+    },
+    "student_num": {
+      "aadhaar_number": 121345377,
+      "umis_number": 939745865,
+      "em_number": 1214565,
+      "community_id":"TN-23453351424",
+      "income_id":"TN-23453551424",
+      " first_graduate_id":"TN-23433351424"
+    },
+    "parents": {
+      "father_name": "Sakamo",
+      "mother_name": "Unknown",
+      "annualIncome": 72000
+    },
+    "Info":{
+          "religion":"Hatakae",
+          "community":"Hatakae-shinobe"
+      },
+    "contact": {
+      "email": "Hataka@example.com",
+      "phone1": 9848425463,
+      "phone2": 8556878343
+    },
+    "address": {
+      "street": "123 Hokaga Street",
+      "city": "Leaf village",
+      "zipcode": 233563
+    },
+    "_id": 12322,
+    "name": "Kakashi",
+    "batch": "2024-27",
+    "dob": "15-09-2003",
+    "image": null
+  },
+
+
+  {
+    "department": {
+      "dep_id": "CS01",
+      "dep_name": "Commerce",
+      "dep_role": "Staff"
+    },
+    "contact": {
+      "email": "staff@gmail.com",
+      "phone": 8610794080
+    },
+    "address": {
+      "street": "Mandu kaniswarar kovil street",
+      "city": "Kanchipuram",
+      "zipcode": 631502
+    },
+    "_id": 9,
+    "name": "Teenu Anand  P",
+    "password": "Anand@11",
+    "dob": "2025-01-16",
+    "image": null,
+    "createdAt": "2025-01-29T11:35:47.053Z",
+    "updatedAt": "2025-01-29T11:35:47.053Z",
+    "__v": 0
+  },
+
+
+{
+  "_id":"CSA15",
+  "course_name":"Summoning",
+  "hour":48,
+  "Student_list":{
+    "batch":"2024-27",
+    "dep_id":"01CS"
+  },
+  "Teacher_detail":{
+    "teacher_id":12346,
+    "teacher_name":"jiriya"
+  }
+},
+
+{
+  "courseId": "CS101",
+  "attendanceData": [
+    { "studentId": "S001", "status": "Present" },
+    { "studentId": "S002", "status": "Absent" },
+    { "studentId": "S003", "status": "Present" }
+  ],
+  "houre":8
+},
+
+{
+  "_id":"CSA15",
+  "course_name":"Summoning",
+  "hour":48,
+  "Student_list":{
+    "batch":"2024-27",
+    "dep_id":"01CS"
+  },
+  "Teacher_detail":{
+    "teacher_id":12346,
+    "teacher_name":"jiriya"
+  }
+},
+
+
+{
+"sem_num": 1,
+"studentId": 12344,
+"subject": [
+  {
+    "name": "co",
+    "code": "CSCO1",
+    "max_mark": 100,
+    "ia_mark": 25,
+    "ue_mark": 75,
+    "total_mark": 100
+  },
+  {
+    "name": "tamil",
+    "code": "CSCO1",
+    "max_mark": 100,
+    "ia_mark": 25,
+    "ue_mark": 75,
+    "total_mark": 100
+  },
+  {
+    "name": "english",
+    "code": "CSCO1",
+    "max_mark": 100,
+    "ia_mark": 25,
+    "ue_mark": 75,
+    "total_mark": 100
+  },
+  {
+    "name": "maths",
+    "code": "CSCO1",
+    "max_mark": 100,
+    "ia_mark": 25,
+    "ue_mark": 75,
+    "total_mark": 100
+  }
+]
+}
+
+
+
+]
