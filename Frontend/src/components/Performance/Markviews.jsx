@@ -12,7 +12,7 @@ const MarkDataDisplay = () => {
   const [chartData, setChartData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
-  const Appuri=process.env.VITE_BASE_URL;
+  const API_URL =import.meta.env.VITE_BASE_URL;
   const fetchMarksData = async () => {
     setLoading(true);
     setError('');
@@ -21,11 +21,11 @@ const MarkDataDisplay = () => {
       let url = '';
 
       if (viewType === 'single') {
-        url = `http://127.0.0.1:5000/admin/result/${studentId}/${semNum}`;
+        url = `${API_URL}/result/${studentId}/${semNum}`;
       } else if (viewType === 'multiple') {
-        url = `http://127.0.0.1:5000/admin/result/${studentId}`;
+        url = `${API_URL}/result/${studentId}`;
       } else if (viewType === 'all') {
-        url = `http://127.0.0.1:5000/admin/result/sub/${subjectCode}`;
+        url = `${API_URL}/result/sub/${subjectCode}`;
       }
 
       const response = await axios.get(url);

@@ -70,7 +70,7 @@ exports.sendMessageToAllStudents = async (req, res) => {
     try {
         const students = await Student.find();
     
-        // Send SMS to each student
+        
         for (const student of students) {
           await twilioClient.messages.create({
             body: message,

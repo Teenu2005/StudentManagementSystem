@@ -10,19 +10,17 @@ const Login = () => {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
+    let response;
     try {
-      let response;
       if (isStudent) {
         response = await studentLogin(credentials.id, credentials.password);
       } else {
         response = await teacherLogin(credentials.id, credentials.password);
       }
-
       setUser({ role: response.data.role, id: response.data.id });
       window.location.href = "/";
     } catch (error) {
-      alert("Invalid credentials");
-      console.log(error);
+      alert("Invalid credentials",error);
     }
   };
 

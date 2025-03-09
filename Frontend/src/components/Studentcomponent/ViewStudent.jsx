@@ -11,6 +11,9 @@ const StudentDisplay = () => {
   const [selectedStudent, setSelectedStudent] = useState(null);
   const [viewedStudent, setViewedStudent] = useState(null); 
   const { user, setUser } = useContext(AuthContext);
+  
+const API_URL =import.meta.env.VITE_BASE_URL;
+const API_MAIN_URL =import.meta.env.VITE_BASE_MAIN_URL;
 
   useEffect(() => {
     const fetchUser = async () => {
@@ -34,9 +37,8 @@ const StudentDisplay = () => {
 
 
   const fetchStudentData = async (query) => {
-    const response = await axios.get(`http://127.0.0.1:5000/admin/student${query}`);
+    const response = await axios.get(`${API_URL}/student${query}`);
     const data = response.data;
-    console.log(data)
     return data;
   };
 
@@ -59,78 +61,78 @@ const StudentDisplay = () => {
     <div  className="card-all-student">
       <div className="profile">
       <h2>{student.name}</h2>
-      {student.image==null? <img src={img} className="profile-pic" alt="student image"/> :<img src={`http://127.0.0.1:5000${student.image}`} alt="Student Image" className="profile-pic" />}
+      {student.image==null? <img src={img} className="profile-pic" alt="student image"/> :<img src={`${API_MAIN_URL}/${student.image}`} alt="Student Image" className="profile-pic" />}
       </div>
       <table>
         <tr>
           <th>
-            <td>ID:</td>
+            ID:
           </th>
             <td>{student._id}</td>
         </tr>
         <tr>
           <th>
-            <td>Batch:</td>
+            Batch:
           </th>
             <td>{student.batch}</td>
         </tr>
         <tr>
           <th>
-            <td>DOB:</td>
+            DOB:
           </th>
             <td>{student.dob}</td>
         </tr>
         <tr>
           <th>
-            <td>Department:</td>
+            Department:
           </th>
             <td>{student.department.dep_name}</td>
         </tr>
         <tr>
           <th>
-            <td>Email:</td>
+            Email:
           </th>
             <td>{student.contact.email}</td>
         </tr>
         <tr>
           <th>
-            <td>Phone:</td>
+            Phone:
           </th>
             <td>{student.contact.phone1}</td>
         </tr>
         <tr>
           <th>
-            <td>Address:</td>
+            Address:
           </th>
             <td>{student.address?.street}</td>
         </tr>
         <tr>
           <th>
-            <td>Father's Name:</td>
+            Father's Name:
           </th>
             <td>{student.parents?.father_name}</td>
         </tr>
         <tr>
           <th>
-            <td>Mother's Name:</td>
+            Mother's Name:
           </th>
             <td>{student.parents?.mother_name}</td>
         </tr>
         <tr>
           <th>
-            <td>Annual Income:</td>
+            Annual Income:
           </th>
             <td>{student.parents.annualIncome}</td>
         </tr>
         <tr>
           <th>
-            <td>Religion:</td>
+            Religion:
           </th>
             <td>{student.Info?.religion}</td>
         </tr>
         <tr>
           <th>
-            <td>Community:</td>
+            Community:
           </th>
             <td>{student.Info?.community}</td>
         </tr>
@@ -204,19 +206,19 @@ const StudentDisplay = () => {
                 <table >
                     <tr>
                       <th>
-                        <td>Name:</td>
+                        Name:
                       </th>
                         <td>{student.name}</td>
                     </tr>
                     <tr>
                       <th>
-                        <td>ID:</td>
+                       ID:
                       </th>
                         <td>{student._id}</td>
                     </tr>
                     <tr>
                       <th>
-                        <td>Phone:</td>
+                        Phone:
                       </th>
                         <td>{student.contact.phone1}</td>
                     </tr>

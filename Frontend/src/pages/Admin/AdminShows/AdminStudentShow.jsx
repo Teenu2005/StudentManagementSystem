@@ -17,7 +17,6 @@ function AdminStudentShow() {
     };
     
     const renderForm = () => {
-      console.log(empty)
       switch (selectedOption) {
         case "view":
           return <StudentDisplay />;

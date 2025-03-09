@@ -18,6 +18,7 @@ const CourseForm = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   const validate = () => {
     const newErrors = {};
@@ -65,7 +66,7 @@ const CourseForm = () => {
                ...formData,
                image: formData.image ? URL.createObjectURL(formData.image) : null
              };
-             const response = await axios.post('http://127.0.0.1:5000/admin/class', formDataToSubmit);
+             const response = await axios.post(`${API_URL}/class`, formDataToSubmit);
              console.log('Data submitted successfully:', response.data);
              alert('Form submitted successfully!');
            } catch (error) {

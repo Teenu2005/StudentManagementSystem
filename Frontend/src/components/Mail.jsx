@@ -6,6 +6,7 @@ const MessageSender = () => {
   const [message, setMessage] = useState('');
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   const handleMessageTypeChange = (e) => {
     setMessageType(e.target.value);
@@ -29,7 +30,7 @@ const MessageSender = () => {
     try {
       const apiUrl = messageType === 'email' ? '/send-email' : '/send-sms';
 
-      const response = await axios.post(`http://127.0.0.1:5000/admin/${apiUrl}`, { message });
+      const response = await axios.post(`${API_URL}/${apiUrl}`, { message });
 
       if (response.data.success) {
         alert(`${messageType.charAt(0).toUpperCase() + messageType.slice(1)} sent successfully to all students!`);

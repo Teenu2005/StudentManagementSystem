@@ -9,12 +9,13 @@ import { checkAuth } from "../../utils/api";
 const UserProfile = () => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
+  const API_MAIN_URL =import.meta.env.VITE_BASE_MAIN_URL;
 
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
                 const res = await checkAuth();
-                const response = await axios.get(`http://127.0.0.1:5000/profile/${res.data.user.id}`, {withCredentials: true});
+                const response = await axios.get(`${API_MAIN_URL}/profile/${res.data.user.id}`, {withCredentials: true});
                 setUser(response.data);
       } catch (error) {
         console.error("Error fetching user details:", error);

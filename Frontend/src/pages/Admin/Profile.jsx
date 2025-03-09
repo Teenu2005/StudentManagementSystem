@@ -8,13 +8,14 @@ import { checkAuth } from "../../utils/api";
 const UserProfile = () => {
   const [loading, setLoading] = useState(true);
   const [user, setUser] = useState(null);
+  const API_MAIN_URL=import.meta.env.VITE_BASE_MAIN_URL;
 
   useEffect(() => {
     const fetchUserDetails = async () => {
       try {
         const res = await checkAuth();
         const response = await axios.get(
-          `http://127.0.0.1:5000/profile/${res.data.user.id}`,
+          `${API_MAIN_URL}/profile/${res.data.user.id}`,
           { withCredentials: true }
         );
         setUser(response.data);
@@ -53,7 +54,7 @@ const UserProfile = () => {
             <img src={img} className="profile-pic" alt="student image" />
           ) : (
             <img
-              src={`http://127.0.0.1:5000${user.image}`}
+              src={`${API_MAIN_URL}/${user.image}`}
               alt="Student Image"
               className="profile-pic"
             />

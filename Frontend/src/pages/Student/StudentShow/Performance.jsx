@@ -16,6 +16,7 @@ const MarkDataDisplay = () => {
   const [error, setError] = useState('');
   const Appuri=process.env.VITE_BASE_URL;
     const { user, setUser } = useContext(AuthContext);
+    const API_URL =import.meta.env.VITE_BASE_URL;
   
     useEffect(() => {
       const fetchUser = async () => {
@@ -37,9 +38,9 @@ const MarkDataDisplay = () => {
       let url = '';
 
       if (viewType === 'single') {
-        url = `http://127.0.0.1:5000/admin/result/${user.id}/${semNum}`;
+        url = `${API_URL}/result/${user.id}/${semNum}`;
       } else if (viewType === 'multiple') {
-        url = `http://127.0.0.1:5000/admin/result/${user.id}`;
+        url = `${API_URL}/result/${user.id}`;
       }
 
       const response = await axios.get(url);

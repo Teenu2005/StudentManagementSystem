@@ -24,6 +24,7 @@ const AddTeacher = () => {
   });
 
   const [errors, setErrors] = useState({});
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   const departmentOptions = [
     "BSc Computer Science",
@@ -87,7 +88,7 @@ const AddTeacher = () => {
            ...formData,
            image: formData.image ? URL.createObjectURL(formData.image) : null
          };
-         const response = await axios.post('http://127.0.0.1:5000/admin/teacher', formDataToSubmit);
+         const response = await axios.post(`${API_URL}/teacher`, formDataToSubmit);
          console.log('Data submitted successfully:', response.data);
          alert('Form submitted successfully!');
        } catch (error) {

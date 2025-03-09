@@ -2,9 +2,10 @@ import React, { useState } from 'react'
 import axios from 'axios'
 function DeleteTeacher() {
     const [id,setid]=useState('');
+    const API_URL =import.meta.env.VITE_BASE_URL;
     const handleSubmit = async (e) => {
         try {
-          const response = await axios.delete(`http://127.0.0.1:5000/admin/teacher/${id}`);
+          const response = await axios.delete(`${API_URL}/teacher/${id}`);
           alert('Deleted  successfully!');
         } catch (error) {
           console.error('Error submitting the form:', error);

@@ -6,10 +6,11 @@ const AttendanceMarking = () => {
   const [hour, setHour] = useState("");
   const [students, setStudents] = useState([]);
   const [attendance, setAttendance] = useState({});
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   const fetchStudents = async () => {
     try {
-      const response = await axios.get(`http://127.0.0.1:5000/admin/makatt/${courseId}`);
+      const response = await axios.get(`${API_URL}/makatt/${courseId}`);
       setStudents(response.data);
       const initialAttendance = {};
       response.data.forEach((student) => {
@@ -43,7 +44,7 @@ const AttendanceMarking = () => {
 
       console.log("Payload to be sent:", payload); 
 
-      await axios.post("http://127.0.0.1:5000/admin/putatt", payload);
+      await axios.post(`${API_URL}/putatt`, payload);
 
       alert("Attendance submitted successfully!");
     } catch (error) {

@@ -7,12 +7,13 @@ const EditStudentForm = () => {
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
   const [formErrors, setFormErrors] = useState({});
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   const fetchStudentData = async () => {
     setLoading(true);
     setError('');
     try {
-      const response = await axios.get(`http://127.0.0.1:5000/admin/student/${studentId}`); // Replace with your API endpoint
+      const response = await axios.get(`${API_URL}/student/${studentId}`); // Replace with your API endpoint
       setStudentData(response.data);
     } catch (err) {
       setError('Failed to fetch student data. Please check the ID and try again.');
@@ -71,7 +72,7 @@ const EditStudentForm = () => {
 
     setLoading(true);
     try {
-      await axios.patch(`http://127.0.0.1:5000/admin/student/${studentId}`, studentData); // Replace with your API endpoint
+      await axios.patch(`${API_URL}/student/${studentId}`, studentData); // Replace with your API endpoint
       alert('Student data updated successfully!');
     } catch (err) {
       alert('Failed to update student data.');

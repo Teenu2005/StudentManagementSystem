@@ -12,7 +12,7 @@ const connectDB = async ()=>  {
         useUnifiedTopology: true,
     })
       
-      console.log("db connected ")
+      console.log("db connected ",process.env.DB_URI)
     }
     catch(err){
       console.error('vankam da mapala db la irruinthu',err)

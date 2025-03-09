@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import axios from 'axios';
 
 export default function SaveStudentMarks() {
+  const API_URL =import.meta.env.VITE_BASE_URL;
   const [studentData, setStudentData] = useState({
     sem_num: 1,
     studentId: '',
@@ -39,7 +40,7 @@ export default function SaveStudentMarks() {
 
   const handleSave = async () => {
     try {
-      const response = await axios.post('http://localhost:5000/admin/result', studentData);
+      const response = await axios.post(`${API_URL}/result`, studentData);
       alert('Student data saved successfully');
     } catch (error) {
         console.log(error)

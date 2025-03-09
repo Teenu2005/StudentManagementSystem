@@ -5,6 +5,7 @@ const CourseDetails = () => {
   const [course, setCourse] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState(null);
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   const fetchCourseDetails = async () => {
     if (!courseId) return;
@@ -12,7 +13,7 @@ const CourseDetails = () => {
     setError(null);
     setCourse(null);
     try {
-      const response = await fetch(`http://127.0.0.1:5000/admin/class/${courseId}`);
+      const response = await fetch(`${API_URL}/class/${courseId}`);
       if (!response.ok) {
         throw new Error("Failed to fetch course details");
       }

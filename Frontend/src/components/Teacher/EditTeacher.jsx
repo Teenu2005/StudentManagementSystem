@@ -6,13 +6,14 @@ const EditTeacher = () => {
   const [FaculityData, setFaculityData] = useState(null);
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState("");
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   // Handle fetching Faculity data
   const fetchFaculityData = async () => {
     setLoading(true);
     setError("");
     try {
-      const response = await axios.get(`http://127.0.0.1:5000/admin/teacher/${FaculityId}`);
+      const response = await axios.get(`${API_URL}/teacher/${FaculityId}`);
       setFaculityData(response.data);
     } catch (err) {
       setError("Faculity not found or an error occurred.");
@@ -24,7 +25,7 @@ const EditTeacher = () => {
   // Handle updating Faculity data
   const handleUpdate = async () => {
     try {
-      await axios.patch(`http://127.0.0.1:5000/admin/teacher/${FaculityId}`, FaculityData);
+      await axios.patch(`${API_URL}/teacher/${FaculityId}`, FaculityData);
       alert("Faculity updated successfully!");
     } catch (err) {
       alert("Error updating Faculity data.");

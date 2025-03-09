@@ -57,6 +57,7 @@ const StudentForm = () => {
     "2024-27",
   ];
   const [errors, setErrors] = useState({});
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   const handleChange = (e, section, key) => {
     const value = e.target.value;
@@ -139,7 +140,7 @@ const StudentForm = () => {
     formDataToSubmit.append('Info[community]', formData.Info.community);
 
     try {
-      const response = await axios.post('http://127.0.0.1:5000/admin/addStudent', formDataToSubmit, {
+      const response = await axios.post(`${API_URL}/addStudent`, formDataToSubmit, {
         headers: {
           'Content-Type': 'multipart/form-data', // Make sure to set the correct header for multipart/form-data
         },

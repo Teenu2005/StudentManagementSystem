@@ -4,6 +4,7 @@ import axios from 'axios';
 
 export default function BulkUpload() {
   const [file, setFile] = useState(null);
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   const handleFileChange = (e) => {
     setFile(e.target.files[0]);
@@ -16,7 +17,7 @@ export default function BulkUpload() {
     formData.append('file', file);
 
     try {
-      const response = await axios.post('http://localhost:5000/admin/upload/mark', formData, {
+      const response = await axios.post(`${API_URL}/upload/mark`, formData, {
         headers: {
           'Content-Type': 'multipart/form-data',
         },

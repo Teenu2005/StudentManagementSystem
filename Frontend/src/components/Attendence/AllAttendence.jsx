@@ -9,6 +9,7 @@ const Attendance = () => {
   const [studentStats, setStudentStats] = useState({});
   const [loading, setLoading] = useState(false);
   const [error, setError] = useState('');
+  const API_URL =import.meta.env.VITE_BASE_URL;
 
   const handleSubmit = async () => {
     setError('');
@@ -27,8 +28,8 @@ const Attendance = () => {
 
     const endpoint =
       option === 'single'
-        ? `http://127.0.0.1:5000/admin/getatt/${courseId}/${hour}`
-        : `http://127.0.0.1:5000/admin/getattall/${courseId}`;
+        ? `${API_URL}/getatt/${courseId}/${hour}`
+        : `${API_URL}/getattall/${courseId}`;
 
     try {
       const response = await axios.get(endpoint);

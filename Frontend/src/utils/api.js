@@ -2,7 +2,7 @@ import axios from "axios";
 import Cookies from "js-cookie";
 
 
-const API_URL =import.meta.env.VITE_BASE_URL;
+const API_URL =import.meta.env.VITE_BASE_MAIN_URL;
 
 export const studentLogin = async (studentId, dob) => {
   return axios.post(`${API_URL}/student-login`, { studentId, dob }, { withCredentials: true });
